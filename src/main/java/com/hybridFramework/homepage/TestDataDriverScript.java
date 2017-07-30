@@ -28,6 +28,6 @@ public class TestDataDriverScript extends TestBase {
 
 	@Test
 	public void skipMethod() {
-		System.out.println("Skipping Test!! ");
+		System.out.println("Skipping Test!!");
 	}
 }
