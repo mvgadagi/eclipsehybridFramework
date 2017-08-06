@@ -1,49 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1632" started-at="2017-07-30T14:29:02Z" finished-at="2017-07-30T14:29:03Z">
+  <suite name="Default suite" duration-ms="738" started-at="2017-08-05T17:03:03Z" finished-at="2017-08-05T17:03:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1632" started-at="2017-07-30T14:29:02Z" finished-at="2017-07-30T14:29:03Z">
-      <class name="com.hybridFramework.homepage.TestDataDriverScript">
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="beforeMethod" is-config="true" duration-ms="16" started-at="2017-07-30T19:59:02Z" finished-at="2017-07-30T19:59:02Z">
+    <test name="Default test" duration-ms="738" started-at="2017-08-05T17:03:03Z" finished-at="2017-08-05T17:03:04Z">
+      <class name="com.hybridFramework.homepage.LoginPage">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hybridFramework.homepage.LoginPage@345965f2]" name="beforeMethod" is-config="true" duration-ms="23" started-at="2017-08-05T22:33:03Z" finished-at="2017-08-05T22:33:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.hybridFramework.homepage.TestDataDriverScript.skipMethod()]]>
+                <![CDATA[public void com.hybridFramework.homepage.LoginPage.init() throws java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="skipMethod()[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="skipMethod" duration-ms="0" started-at="2017-07-30T19:59:02Z" finished-at="2017-07-30T19:59:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- skipMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-30T19:59:02Z" finished-at="2017-07-30T19:59:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=skipMethod status=SUCCESS method=TestDataDriverScript.skipMethod()[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="FAIL" signature="testFailure()[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="testFailure" duration-ms="0" started-at="2017-07-30T19:59:02Z" finished-at="2017-07-30T19:59:02Z">
-          <exception class="junit.framework.AssertionFailedError">
+        <test-method status="FAIL" signature="init()[pri:0, instance:com.hybridFramework.homepage.LoginPage@345965f2]" name="init" duration-ms="77" started-at="2017-08-05T22:33:03Z" finished-at="2017-08-05T22:33:03Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.fail(Assert.java:53)
-	at com.hybridFramework.homepage.TestDataDriverScript.testFailure(TestDataDriverScript.java:26)
+              <![CDATA[java.lang.NullPointerException
+	at com.hybridFramework.testBase.TestBase.init(TestBase.java:122)
+	at com.hybridFramework.homepage.LoginPage.init(LoginPage.java:17)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
@@ -67,123 +51,26 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- junit.framework.AssertionFailedError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFailure -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-30T19:59:02Z" finished-at="2017-07-30T19:59:02Z">
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.hybridFramework.homepage.LoginPage@345965f2]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-08-05T22:33:03Z" finished-at="2017-08-05T22:33:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testFailure status=FAILURE method=TestDataDriverScript.testFailure()[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517] output={null}]]]>
+                <![CDATA[[TestResult name=init status=FAILURE method=LoginPage.init()[pri:0, instance:com.hybridFramework.homepage.LoginPage@345965f2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-30T19:59:02Z" finished-at="2017-07-30T19:59:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hybridFramework.homepage.TestDataDriverScript.testFailure()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="testLogin" duration-ms="4" started-at="2017-07-30T19:59:03Z" data-provider="testData" finished-at="2017-07-30T19:59:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automation@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-30T19:59:03Z" finished-at="2017-07-30T19:59:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hybridFramework.homepage.TestDataDriverScript.testLogin(java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-30T19:59:03Z" finished-at="2017-07-30T19:59:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testLogin status=SUCCESS method=TestDataDriverScript.testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2017-07-30T19:59:03Z" finished-at="2017-07-30T19:59:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hybridFramework.homepage.TestDataDriverScript.testLogin(java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="testLogin" duration-ms="0" started-at="2017-07-30T19:59:03Z" data-provider="testData" finished-at="2017-07-30T19:59:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automation@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="endTest" is-config="true" duration-ms="498" started-at="2017-07-30T19:59:03Z" finished-at="2017-07-30T19:59:03Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.hybridFramework.homepage.LoginPage@345965f2]" name="endTest" is-config="true" duration-ms="585" started-at="2017-08-05T22:33:03Z" finished-at="2017-08-05T22:33:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-30T19:59:03Z" finished-at="2017-07-30T19:59:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testLogin status=SUCCESS method=TestDataDriverScript.testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hybridFramework.homepage.TestDataDriverScript@58134517] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.hybridFramework.homepage.TestDataDriverScript -->
+      </class> <!-- com.hybridFramework.homepage.LoginPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

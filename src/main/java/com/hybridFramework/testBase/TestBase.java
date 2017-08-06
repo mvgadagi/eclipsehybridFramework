@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.bcel.Repository;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -19,7 +20,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -35,7 +37,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class TestBase {
 
 	public static final Logger logger = Logger.getLogger(TestBase.class.getName());
-	public WebDriver driver;
+	// public WebDriver driver;
 	public Properties OR;
 	public File f1;
 	public FileInputStream file;
@@ -43,7 +45,7 @@ public class TestBase {
 
 	public static ExtentReports extent;
 	public static ExtentTest test;
-
+	static WebDriver driver;
 	static {
 		Calendar calender = Calendar.getInstance();
 		SimpleDateFormat format = new SimpleDateFormat("MM_dd_yyyy_hh_mm_ss");
@@ -91,12 +93,18 @@ public class TestBase {
 
 		if (System.getProperty("os.name").contains("Window")) {
 			if (browser.equalsIgnoreCase("firefox")) {
+				System.out.println("Windows is selected");
 				System.setProperty("webdriver.gecko.driver",
-						System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+						System.getProperty("user.dir") + "\\drivers\\geckodriver.exe");
+				driver = new FirefoxDriver();
 			}
 			else if (browser.equalsIgnoreCase("chrome")) {
+				System.out.println("Selected Chrome Driver");
+				System.out.println(System.getProperty("user.dir"));
 				System.setProperty("webdriver.chrome.driver",
-						System.getProperty("usr.dir") + "/drivers/chromedriver.exe");
+						System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
+				driver = new ChromeDriver();
+
 			}
 		}
 
@@ -110,6 +118,12 @@ public class TestBase {
 			}
 		}
 
+	}
+
+	public void init() throws IOException, InterruptedException {
+		loadPropertiesFile();
+		getBrowser(OR.getProperty("browser"));
+		driver.get(OR.getProperty("url"));
 	}
 
 	public void getScreenshot(String imageName) throws IOException {
@@ -257,11 +271,10 @@ public class TestBase {
 
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		TestBase test = new TestBase();
-		test.loadPropertiesFile();
-		test.getWebElements("password");
-	}
+		test.init();
 
+	}
 }
